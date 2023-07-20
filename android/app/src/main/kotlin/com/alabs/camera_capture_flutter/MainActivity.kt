@@ -1,4 +1,4 @@
-package com.example.camera_capture_flutter
+package com.alabs.camera_capture_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

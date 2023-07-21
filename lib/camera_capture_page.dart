@@ -37,30 +37,28 @@ class _CameraCaptureState extends State<CameraCapturePage> {
               tileMode: TileMode.decal,
             ),
           ),
-          child: Flexible(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                CircleCameraWidget(
-                  cameraController: _cameraController,
-                  isCameraTurned: _isCameraTurned,
-                  picture: _picture,
-                ),
-                CaptureButtonWidget(
-                  isCameraTurned: _isCameraTurned,
-                  onPressed: () {
-                    if (_isCameraTurned) {
-                      _takePicture();
-                    } else {
-                      _startCamera();
-                    }
-                  },
-                ),
-              ],
+          child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  CircleCameraWidget(
+                    cameraController: _cameraController,
+                    isCameraTurned: _isCameraTurned,
+                    picture: _picture,
+                  ),
+                  CaptureButtonWidget(
+                    isCameraTurned: _isCameraTurned,
+                    onPressed: () {
+                      if (_isCameraTurned) {
+                        _takePicture();
+                      } else {
+                        _startCamera();
+                      }
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ),
     );
   }
 
